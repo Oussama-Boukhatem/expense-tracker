@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Expense</title>
+</head>
+<body>
+    <h1>Edit Expense</h1>
+<form action="/update-expense/<%= expense.id %>" method="POST">
+  <div>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" value="<%= expense.description %>" required>
+  </div>
+  <div>
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" name="amount" value="<%= expense.amount %>" step="0.01" required>
+  </div>
+  <div>
+    <label for="category">Category:</label>
+    <select id="category" name="category" required>
+      <option value="Food" <%= expense.category === 'Food' ? 'selected' : '' %>>Food</option>
+      <option value="Transportation" <%= expense.category === 'Transportation' ? 'selected' : '' %>>Transport</option>
+      <option value="Entertainment" <%= expense.category === 'Entertainment' ? 'selected' : '' %>>Entertainment</option>
+      <option value="Bills" <%= expense.category === 'Bills' ? 'selected' : '' %>>Bills</option>
+      <option value="Other" <%= expense.category === 'Other' ? 'selected' : '' %>>Other</option>
+    </select>
+  </div>
+  <div>
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" value="<%= expense.date %>" required>
+  </div>
+  <button type="submit">Update Expense</button>
+</form>
+<a href="/">Cancel</a>
+</body>
+</html>

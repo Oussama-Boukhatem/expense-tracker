@@ -35,6 +35,12 @@
         <strong><%= expense.category %></strong><br />
         <strong><%= expense.description %></strong> - $<%= expense.amount %> on
         <%= expense.date %>
+        <a href="/edit-expense/<%= expense.id %>">
+          <button type="button">Edit</button>
+        </a>
+        <form method="POST" action="/delete/<%= expense.id %>">
+          <button type="submit">Delete</button>
+        </form>
       </li>
       <% }) %>
     </ul>
