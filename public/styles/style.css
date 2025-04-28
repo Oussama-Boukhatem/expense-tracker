@@ -1,0 +1,39 @@
+body {
+    background-color: #f5f5f5;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    color: #4a90e2;
+    text-align: center;
+}
+
+button {
+    color: white;
+    background-color: #4a90e2;
+    border: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 120px;    /* Set the button width */
+    height: 40px;    /* Set the button height */
+    font-size: 16px; /* Control the text size inside */
+    padding: 8px;    /* Inner space between text and button border */
+    border-radius: 6px; /* Make corners rounded (optional) */
+}
+
+form input,
+form button,
+form label,
+form select {
+    margin-bottom: 15px; /* space below each element */
+    display: block; /* makes them stack vertically */
+}
+
+form {
+    width: 300px; /* or whatever size fits your design */
+    margin: 50px auto; /* auto horizontally centers it */
+    padding: 20px;
+    border: 1px solid #ccc; /* optional: adds a light border */
+    border-radius: 8px; /* optional: rounds the corners */
+    background-color: #f9f9f9; /* optional: light background */
+}
+
